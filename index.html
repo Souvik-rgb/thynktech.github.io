@@ -1,221 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thynk Tech Automation</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Outfit', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-      scroll-behavior: smooth;
-    }
-    header {
-      background: #001f3f;
-      color: white;
-      padding: 1rem;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 10px;
-    }
-    .logo {
-      max-width: 50px;
-      height: auto;
-      margin-bottom: 0;
-    }
-    .brand-name {
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: white;
-      letter-spacing: 1px;
-    }
-    nav {
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffdc00;
-    }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-      animation: fadeIn 1s ease;
-    }
-    h1, h2 {
-      color: #001f3f;
-    }
-    .services, .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-    .card {
-      background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    input, textarea, button {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      background: #001f3f;
-      color: white;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #003366;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .hero-videos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin: 1rem auto;
-    }
-    .hero-video {
-      width: 100%;
-      max-width: 280px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      background: #000;
-    }
-    @media (max-width: 600px) {
-      .hero-videos {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-      .hero-video {
-        max-width: 100%;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Home Automation | Thynk Tech</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <div class="brand">
-      <img src="logo.png" alt="Thynk Tech Logo" class="logo">
-      <span class="brand-name">Thynk Tech Automation</span>
-    </div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#how-it-works">How It Works</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Home Automation Projects</h1>
+    <a href="index.html">Back to Home</a>
   </header>
-
   <section>
-    <h2>Tailored Automation. Limitless Possibilities.</h2>
-    <p>We build custom automation systems for homes, industries, and specialized environments — using the best tools to bring your vision to life.</p>
-    <div class="hero-videos">
-      <video class="hero-video" src="videos/home-hub.mp4" autoplay loop muted playsinline></video>
-      <video class="hero-video" src="videos/motion-sensor.mp4" autoplay loop muted playsinline></video>
-      <video class="hero-video" src="videos/smart-light.mp4" autoplay loop muted playsinline></video>
-      <video class="hero-video" src="videos/wifi-plug.mp4" autoplay loop muted playsinline></video>
-    </div>
-    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Get a Free Project Quote</button>
-  </section>
+    <h2>Smart Lighting System</h2>
+    <p>Motion-activated lighting using ESP32 with remote app control.</p>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="card">
-        <h3>Home Automation</h3>
-        <p>Smart lighting, security, climate control, voice integration, and more.</p>
-      </div>
-      <div class="card">
-        <h3>Industrial Automation</h3>
-        <p>PLCs, SCADA, sensors, smart production lines, and real-time control.</p>
-      </div>
-      <div class="card">
-        <h3>IoT & Monitoring</h3>
-        <p>Cloud-based dashboards, data logging, alerts, and predictive systems.</p>
-      </div>
-      <div class="card">
-        <h3>Custom Robotics</h3>
-        <p>Robotic arms, pick-and-place units, CNC machines, and motion systems.</p>
-      </div>
-    </div>
+    <h2>Voice-Controlled Thermostat</h2>
+    <p>Google Assistant integrated system for dynamic room temperature control.</p>
   </section>
+</body>
+</html>
 
-  <section id="how-it-works">
-    <h2>How It Works</h2>
-    <ol>
-      <li><strong>Consultation:</strong> Understand your needs and define the project scope.</li>
-      <li><strong>Design:</strong> We create the most efficient and cost-effective solution.</li>
-      <li><strong>Build & Test:</strong> Prototyping, assembly, and rigorous testing.</li>
-      <li><strong>Deploy & Support:</strong> Delivery, installation, and long-term support.</li>
-    </ol>
+--- industrial-automation.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Industrial Automation | Thynk Tech</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Industrial Automation Projects</h1>
+    <a href="index.html">Back to Home</a>
+  </header>
+  <section>
+    <h2>Smart Conveyor Line</h2>
+    <p>Sensor-based conveyor with PLC integration and remote monitoring.</p>
+
+    <h2>Automated Packaging System</h2>
+    <p>Robotic arms and sensors synchronized for efficient packaging.</p>
   </section>
+</body>
+</html>
 
-  <section id="portfolio">
-    <h2>Project Portfolio</h2>
-    <div class="portfolio">
-      <div class="card">
-        <h3>Smart Factory Conveyor</h3>
-        <p>PLC-driven conveyor with sensor-triggered stops and web monitoring.</p>
-      </div>
-      <div class="card">
-        <h3>Home Lighting System</h3>
-        <p>Motion-controlled lighting using ESP32 with mobile app control.</p>
-      </div>
-      <div class="card">
-        <h3>IoT Warehouse Monitor</h3>
-        <p>Temperature/humidity logging system with SMS/email alerts.</p>
-      </div>
-      <div class="card">
-        <h3>Liquid Dispensing Robot</h3>
-        <p>Stepper-controlled dispenser with touch interface and adjustable flow.</p>
-      </div>
-    </div>
+--- iot-monitoring.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IoT & Monitoring | Thynk Tech</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>IoT & Monitoring Projects</h1>
+    <a href="index.html">Back to Home</a>
+  </header>
+  <section>
+    <h2>Warehouse Environment Monitor</h2>
+    <p>ESP32-based sensor system logging temperature/humidity to the cloud.</p>
+
+    <h2>Predictive Maintenance Alerts</h2>
+    <p>Vibration and heat tracking for early equipment failure warnings.</p>
   </section>
+</body>
+</html>
 
-  <section id="contact">
-    <h2>Start Your Custom Project</h2>
-    <form>
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Email Address" required />
-      <textarea rows="5" placeholder="Describe your automation need..." required></textarea>
-      <input type="file" />
-      <input type="text" placeholder="Preferred Tools / Brands (optional)" />
-      <button type="submit">Submit Request</button>
-    </form>
+--- custom-robotics.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Robotics | Thynk Tech</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Custom Robotics Projects</h1>
+    <a href="index.html">Back to Home</a>
+  </header>
+  <section>
+    <h2>Liquid Dispensing Arm</h2>
+    <p>Stepper motor robot with touch control and adjustable output.</p>
+
+    <h2>CNC Plotter Bot</h2>
+    <p>Custom-built CNC bot using Arduino and G-code for drawing or cutting.</p>
   </section>
-
-  <footer>
-    <p>&copy; 2025 Thynk Tech Automation. All rights reserved.</p>
-  </footer>
 </body>
 </html>
