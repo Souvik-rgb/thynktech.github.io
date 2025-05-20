@@ -1,91 +1,87 @@
---- home-automation.html ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Home Automation | Thynk Tech</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Thynk Tech | Home</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>Home Automation Projects</h1>
-    <a href="index.html">Back to Home</a>
+    <h1>Thynk Tech</h1>
+    <nav>
+      <a href="home-automation.html">Home Automation</a>
+      <a href="industrial-automation.html">Industrial Automation</a>
+      <a href="iot-monitoring.html">IoT & Monitoring</a>
+      <a href="custom-robotics.html">Custom Robotics</a>
+    </nav>
+    <!-- Theme Toggle Switch -->
+    <label class="theme-switch" title="Toggle dark/light mode">
+      <input type="checkbox" id="theme-toggle">
+      <span>🌙 Dark Mode</span>
+    </label>
   </header>
-  <section>
-    <h2>Smart Lighting System</h2>
-    <p>Motion-activated lighting using ESP32 with remote app control.</p>
 
-    <h2>Voice-Controlled Thermostat</h2>
-    <p>Google Assistant integrated system for dynamic room temperature control.</p>
+  <section class="hero">
+    <h2>Welcome to Thynk Tech</h2>
+    <p>Your partner in smart solutions, automation, and IoT innovation.</p>
+    <div class="hero-buttons">
+      <a href="contact.html" class="btn primary">Contact Us</a>
+      <a href="about.html" class="btn">Learn More</a>
+    </div>
   </section>
-</body>
-</html>
 
---- industrial-automation.html ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Industrial Automation | Thynk Tech</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Industrial Automation Projects</h1>
-    <a href="index.html">Back to Home</a>
-  </header>
-  <section>
-    <h2>Smart Conveyor Line</h2>
-    <p>Sensor-based conveyor with PLC integration and remote monitoring.</p>
-
-    <h2>Automated Packaging System</h2>
-    <p>Robotic arms and sensors synchronized for efficient packaging.</p>
+  <section class="product-list">
+    <div class="product-card">
+      <h3>Home Automation</h3>
+      <p>Modernize your living space with our smart home solutions.</p>
+    </div>
+    <div class="product-card">
+      <h3>Industrial Automation</h3>
+      <p>Transform your factory with real-time, sensor-driven automation.</p>
+    </div>
   </section>
-</body>
-</html>
 
---- iot-monitoring.html ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>IoT & Monitoring | Thynk Tech</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>IoT & Monitoring Projects</h1>
-    <a href="index.html">Back to Home</a>
-  </header>
-  <section>
-    <h2>Warehouse Environment Monitor</h2>
-    <p>ESP32-based sensor system logging temperature/humidity to the cloud.</p>
-
-    <h2>Predictive Maintenance Alerts</h2>
-    <p>Vibration and heat tracking for early equipment failure warnings.</p>
+  <section class="videos">
+    <div class="video-card">
+      <h4>Smart Lighting Demo</h4>
+      <video controls>
+        <source src="videos/smart-lighting.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-card">
+      <h4>Robotic Arm in Action</h4>
+      <video controls>
+        <source src="videos/robotic-arm.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </section>
-</body>
-</html>
 
---- custom-robotics.html ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Custom Robotics | Thynk Tech</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Custom Robotics Projects</h1>
-    <a href="index.html">Back to Home</a>
-  </header>
-  <section>
-    <h2>Liquid Dispensing Arm</h2>
-    <p>Stepper motor robot with touch control and adjustable output.</p>
+  <footer>
+    <p>&copy; 2025 Thynk Tech. All rights reserved.</p>
+  </footer>
 
-    <h2>CNC Plotter Bot</h2>
-    <p>Custom-built CNC bot using Arduino and G-code for drawing or cutting.</p>
-  </section>
+  <!-- Theme toggle script -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Set initial theme based on saved preference
+    if(localStorage.getItem('theme') === 'light') {
+      body.classList.add('light-mode');
+      toggle.checked = true;
+    }
+
+    toggle.addEventListener('change', function() {
+      if(this.checked) {
+        body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.remove('light-mode');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
 </body>
 </html>
