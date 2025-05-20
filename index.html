@@ -1,226 +1,176 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Thynk Tech | Home</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #121212;
-      color: #fff;
-    }
-    header {
-      background: #1f1f1f;
-      padding: 1em;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1em;
-    }
-    .logo-link {
-      display: flex;
-      align-items: center;
-      margin-right: 1em;
-    }
-    .logo {
-      height: 48px;
-      width: auto;
-      display: block;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.6em;
-      letter-spacing: 2px;
-    }
-    nav {
-      display: flex;
-      gap: 1em;
-    }
-    nav a {
-      color: #03dac6;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .theme-switch {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      font-size: 1em;
-      margin-left: 1em;
-    }
-    .theme-switch input {
-      margin-right: 0.5em;
-    }
-    .hero {
-      text-align: center;
-      padding: 4em 1em;
-      background: #272727;
-    }
-    .hero-buttons {
-      margin-top: 1em;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.7em 1.2em;
-      margin: 0.3em;
-      background: #333;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.2s;
-    }
-    .btn.primary {
-      background: #03dac6;
-      color: #000;
-    }
-    .btn:hover, .btn.primary:hover {
-      opacity: 0.8;
-    }
-    .product-list {
-      display: flex;
-      justify-content: space-around;
-      padding: 2em;
-      flex-wrap: wrap;
-    }
-    .product-card {
-      background: #1e1e1e;
-      padding: 1em;
-      border-radius: 8px;
-      width: 40%;
-      margin-bottom: 1em;
-    }
-    .videos {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5em;
-      padding: 2em;
-    }
-    .video-card {
-      background: #1f1f1f;
-      padding: 1em;
-      border-radius: 8px;
-    }
-    video {
-      width: 100%;
-      border-radius: 8px;
-    }
-    footer {
-      text-align: center;
-      padding: 1em;
-      background: #1f1f1f;
-      margin-top: 2em;
-    }
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: #fff;
+}
 
-    /* LIGHT THEME OVERRIDES */
-    body.light-mode {
-      background: #fff;
-      color: #121212;
-    }
-    body.light-mode header,
-    body.light-mode .video-card,
-    body.light-mode .product-card,
-    body.light-mode footer {
-      background: #f1f1f1;
-      color: #121212;
-    }
-    body.light-mode nav a {
-      color: #00796b;
-    }
-    body.light-mode .btn {
-      background: #ececec;
-      color: #121212;
-    }
-    body.light-mode .btn.primary {
-      background: #00796b;
-      color: #fff;
-    }
-    body.light-mode .hero {
-      background: #e0e0e0;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <a href="index.html" class="logo-link">
-      <img src="images/logo.png" alt="Thynk Tech Logo" class="logo">
-    </a>
-    <h1>Thynk Tech</h1>
-    <nav>
-      <a href="home-automation.html">Home Automation</a>
-      <a href="industrial-automation.html">Industrial Automation</a>
-      <a href="iot-monitoring.html">IoT & Monitoring</a>
-      <a href="custom-robotics.html">Custom Robotics</a>
-    </nav>
-    <label class="theme-switch" title="Toggle dark/light mode">
-      <input type="checkbox" id="theme-toggle">
-      <span>🌙 Dark Mode</span>
-    </label>
-  </header>
+/* Header & logo */
+header {
+  background: #1f1f1f;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-between;
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+}
+.logo {
+  height: 48px;
+  width: auto;
+  display: block;
+}
 
-  <section class="hero">
-    <h2>Welcome to Thynk Tech</h2>
-    <p>Your partner in smart solutions, automation, and IoT innovation.</p>
-    <div class="hero-buttons">
-      <a href="contact.html" class="btn primary">Contact Us</a>
-      <a href="about.html" class="btn">Learn More</a>
-    </div>
-  </section>
+/* Title and nav */
+header h1 {
+  margin: 0;
+  font-size: 1.6em;
+  letter-spacing: 2px;
+}
+nav {
+  display: flex;
+  gap: 1em;
+}
+nav a {
+  color: #03dac6;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #fff;
+}
 
-  <section class="product-list">
-    <div class="product-card">
-      <h3>Home Automation</h3>
-      <p>Modernize your living space with our smart home solutions.</p>
-    </div>
-    <div class="product-card">
-      <h3>Industrial Automation</h3>
-      <p>Transform your factory with real-time, sensor-driven automation.</p>
-    </div>
-  </section>
+/* Theme switch */
+.theme-switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 1em;
+}
+.theme-switch input {
+  margin-right: 0.5em;
+}
 
-  <section class="videos">
-    <div class="video-card">
-      <h4>Smart Lighting Demo</h4>
-      <video controls>
-        <source src="videos/smart-lighting.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="video-card">
-      <h4>Robotic Arm in Action</h4>
-      <video controls>
-        <source src="videos/robotic-arm.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </section>
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 4em 1em;
+  background: #272727;
+}
+.hero-buttons {
+  margin-top: 1em;
+}
+.btn {
+  display: inline-block;
+  padding: 0.7em 1.2em;
+  margin: 0.3em;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+.btn.primary {
+  background: #03dac6;
+  color: #000;
+}
+.btn:hover, .btn.primary:hover {
+  opacity: 0.8;
+}
 
-  <footer>
-    <p>&copy; 2025 Thynk Tech. All rights reserved.</p>
-  </footer>
+/* Product cards */
+.product-list {
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.product-card {
+  background: #1e1e1e;
+  padding: 1em;
+  border-radius: 8px;
+  width: 40%;
+  min-width: 240px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
 
-  <!-- Theme toggle script -->
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    const body = document.body;
+/* Videos section */
+.videos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+  padding: 2em;
+}
+.video-card {
+  background: #1f1f1f;
+  padding: 1em;
+  border-radius: 8px;
+}
+video {
+  width: 100%;
+  border-radius: 8px;
+}
 
-    // Set initial theme based on saved preference
-    if(localStorage.getItem('theme') === 'light') {
-      body.classList.add('light-mode');
-      toggle.checked = true;
-    }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #1f1f1f;
+  margin-top: 2em;
+  color: #fff;
+}
 
-    toggle.addEventListener('change', function() {
-      if(this.checked) {
-        body.classList.add('light-mode');
-        localStorage.setItem('theme', 'light');
-      } else {
-        body.classList.remove('light-mode');
-        localStorage.setItem('theme', 'dark');
-      }
-    });
-  </script>
-</body>
-</html>
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  .product-card {
+    width: 90%;
+  }
+  .videos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* LIGHT THEME OVERRIDES */
+body.light-mode {
+  background: #fff;
+  color: #121212;
+}
+body.light-mode header,
+body.light-mode .video-card,
+body.light-mode .product-card,
+body.light-mode footer {
+  background: #f1f1f1;
+  color: #121212;
+}
+body.light-mode nav a {
+  color: #00796b;
+}
+body.light-mode nav a:hover {
+  color: #000;
+}
+body.light-mode .btn {
+  background: #ececec;
+  color: #121212;
+}
+body.light-mode .btn.primary {
+  background: #00796b;
+  color: #fff;
+}
+body.light-mode .hero {
+  background: #e0e0e0;
+}
