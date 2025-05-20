@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -12,6 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 header h1 {
@@ -43,6 +43,7 @@ nav a {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
+  transition: background 0.2s;
 }
 
 .btn.primary {
@@ -50,10 +51,15 @@ nav a {
   color: #000;
 }
 
+.btn:hover, .btn.primary:hover {
+  opacity: 0.8;
+}
+
 .product-list {
   display: flex;
   justify-content: space-around;
   padding: 2em;
+  flex-wrap: wrap;
 }
 
 .product-card {
@@ -61,6 +67,7 @@ nav a {
   padding: 1em;
   border-radius: 8px;
   width: 40%;
+  margin-bottom: 1em;
 }
 
 form {
@@ -108,4 +115,43 @@ footer {
   padding: 1em;
   background: #1f1f1f;
   margin-top: 2em;
+}
+
+/* --- Theme Toggle Switch Styling --- */
+.theme-switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 1em;
+}
+.theme-switch input {
+  margin-right: 0.5em;
+}
+
+/* --- LIGHT THEME OVERRIDES --- */
+body.light-mode {
+  background: #fff;
+  color: #121212;
+}
+body.light-mode header,
+body.light-mode .video-card,
+body.light-mode .product-card,
+body.light-mode footer {
+  background: #f1f1f1;
+  color: #121212;
+}
+body.light-mode nav a {
+  color: #00796b;
+}
+body.light-mode .btn {
+  background: #ececec;
+  color: #121212;
+}
+body.light-mode .btn.primary {
+  background: #00796b;
+  color: #fff;
+}
+body.light-mode .hero {
+  background: #e0e0e0;
 }
