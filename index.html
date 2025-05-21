@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<!DOCTYPE html><html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,124 +15,123 @@
       --card-bg: white;
       --button-bg: #001f3f;
       --button-hover: #003366;
-    }
+    }[data-theme="dark"] {
+  --bg-color: #111;
+  --text-color: #eee;
+  --header-bg: #000;
+  --header-text: #fff;
+  --card-bg: #1c1c1c;
+  --button-bg: #444;
+  --button-hover: #666;
+}
 
-    [data-theme="dark"] {
-      --bg-color: #111;
-      --text-color: #eee;
-      --header-bg: #000;
-      --header-text: #fff;
-      --card-bg: #1c1c1c;
-      --button-bg: #444;
-      --button-hover: #666;
-    }
+body {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+header, footer {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 1rem;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo {
+  max-width: 50px;
+}
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+nav a {
+  color: var(--header-text);
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #ffdc00;
+}
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  animation: fadeIn 1s ease;
+}
+h1, h2 {
+  color: var(--text-color);
+}
+.services, .portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+input, textarea, button {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  background: var(--button-bg);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: var(--button-hover);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.theme-toggle {
+  margin-left: auto;
+  margin-top: 10px;
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--header-text);
+  color: var(--header-text);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
 
-    body {
-      font-family: 'Outfit', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: var(--bg-color);
-      color: var(--text-color);
-      scroll-behavior: smooth;
-    }
-    header, footer {
-      background: var(--header-bg);
-      color: var(--header-text);
-      padding: 1rem;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .branding {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .logo {
-      max-width: 50px;
-    }
-    .brand-name {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-    nav a {
-      color: var(--header-text);
-      margin: 0 15px;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffdc00;
-    }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-      animation: fadeIn 1s ease;
-    }
-    h1, h2 {
-      color: var(--text-color);
-    }
-    .services, .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-    .card {
-      background: var(--card-bg);
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    input, textarea, button {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      background: var(--button-bg);
-      color: white;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: var(--button-hover);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .hero-img {
-      width: 100%;
-      max-width: 600px;
-      display: block;
-      margin: 1rem auto;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    .theme-toggle {
-      margin-left: auto;
-      margin-top: 10px;
-      cursor: pointer;
-      background: none;
-      border: 1px solid var(--header-text);
-      color: var(--header-text);
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 0.9rem;
-    }
   </style>
 </head>
 <body>
@@ -149,16 +147,15 @@
       <a href="#contact">Contact</a>
     </nav>
     <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-  </header>
-
-  <section>
+  </header>  <section>
     <h2>Tailored Automation. Limitless Possibilities.</h2>
     <p>We build custom automation systems for homes, industries, and specialized environments — using the best tools to bring your vision to life.</p>
-    <img src="hero-image.jpg" alt="Automation Example" class="hero-img">
+    <video controls width="100%" style="margin-top: 1rem; border-radius: 10px;">
+      <source src="videos/automation-demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
     <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Get a Free Project Quote</button>
-  </section>
-
-  <section id="services">
+  </section>  <section id="services">
     <h2>Our Services</h2>
     <div class="services">
       <div class="card">
@@ -178,9 +175,7 @@
         <p>Robotic arms, pick-and-place units, CNC machines, and motion systems.</p>
       </div>
     </div>
-  </section>
-
-  <section id="how-it-works">
+  </section>  <section id="how-it-works">
     <h2>How It Works</h2>
     <ol>
       <li><strong>Consultation:</strong> Understand your needs and define the project scope.</li>
@@ -188,9 +183,7 @@
       <li><strong>Build & Test:</strong> Prototyping, assembly, and rigorous testing.</li>
       <li><strong>Deploy & Support:</strong> Delivery, installation, and long-term support.</li>
     </ol>
-  </section>
-
-  <section id="portfolio">
+  </section>  <section id="portfolio">
     <h2>Project Portfolio</h2>
     <div class="portfolio">
       <div class="card">
@@ -210,9 +203,7 @@
         <p>Stepper-controlled dispenser with touch interface and adjustable flow.</p>
       </div>
     </div>
-  </section>
-
-  <section id="contact">
+  </section>  <section id="contact">
     <h2>Start Your Custom Project</h2>
     <form action="https://formsubmit.co/your-email@example.com" method="POST" enctype="multipart/form-data">
       <input type="text" name="name" placeholder="Full Name" required />
@@ -222,19 +213,13 @@
       <input type="text" name="tools" placeholder="Preferred Tools / Brands (optional)" />
       <button type="submit">Submit Request</button>
     </form>
-  </section>
-
-  <footer>
+  </section>  <footer>
     <p>&copy; 2025 Thynk Tech Automation. All rights reserved.</p>
-  </footer>
-
-  <script>
+  </footer>  <script>
     function toggleTheme() {
       const html = document.documentElement;
       const current = html.getAttribute('data-theme');
       html.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
     }
-  </script>
-</body>
+  </script></body>
   </html>
-  
