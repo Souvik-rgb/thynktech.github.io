@@ -1,21 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home Automation | Thynk Tech</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+      --header-bg: #001f3f;
+      --header-text: white;
+      --card-bg: white;
+      --button-bg: #001f3f;
+      --button-hover: #003366;
+    }
+    [data-theme="dark"] {
+      --bg-color: #111;
+      --text-color: #eee;
+      --header-bg: #000;
+      --header-text: #fff;
+      --card-bg: #1c1c1c;
+      --button-bg: #444;
+      --button-hover: #666;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+    header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+    .branding {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      max-width: 50px;
+    }
+    .brand-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    a {
+      color: var(--header-text);
+      text-decoration: none;
+      margin-left: auto;
+    }
+    a:hover {
+      color: #ffdc00;
+    }
+    .theme-toggle {
+      margin-left: 1rem;
+      background: none;
+      border: 1px solid var(--header-text);
+      color: var(--header-text);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      color: var(--text-color);
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Home Automation Projects</h1>
+    <div class="branding">
+      <img src="logo.png" alt="Thynk Tech Logo" class="logo">
+      <div class="brand-name">Thynk Tech Automation</div>
+    </div>
     <a href="index.html">Back to Home</a>
-  </header>
-  <section>
-    <h2>Smart Lighting System</h2>
-    <p>Motion-activated lighting using ESP32 with remote app control.</p>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </header>  <section>
+    <h2>Home Automation Solutions</h2>
+    <p>Welcome to our dedicated Home Automation page. Here you’ll find solutions designed to make everyday life smarter, safer, and more efficient. Our systems are tailored to your needs and integrated with the latest technologies.</p><h3>Smart Lighting System</h3>
+<p>Automate your lights with motion sensors, voice commands, and mobile control. Save energy and enhance comfort throughout your home.</p>
 
-    <h2>Voice-Controlled Thermostat</h2>
-    <p>Google Assistant integrated system for dynamic room temperature control.</p>
-  </section>
-</body>
-</html>
+<h3>Voice-Controlled Thermostat</h3>
+<p>Control your home climate with smart thermostats integrated with Alexa or Google Assistant. Automatically adjust temperatures based on time of day or presence.</p>
+
+<h3>Security & Surveillance</h3>
+<p>Install smart locks, IP cameras, and intrusion detection systems that you can monitor from anywhere in the world using your smartphone.</p>
+
+<h3>Energy Monitoring</h3>
+<p>Track energy consumption of appliances, receive notifications, and automate shutdowns for efficient usage and reduced bills.</p>
+
+  </section>  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    });
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const newTheme = current === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+  </script></body>
+  </html>
