@@ -214,12 +214,12 @@
 
   <section id="contact">
     <h2>Start Your Custom Project</h2>
-    <form>
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Email Address" required />
-      <textarea rows="5" placeholder="Describe your automation need..." required></textarea>
-      <input type="file" />
-      <input type="text" placeholder="Preferred Tools / Brands (optional)" />
+    <form action="https://formsubmit.co/your-email@example.com" method="POST" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <textarea name="message" rows="5" placeholder="Describe your automation need..." required></textarea>
+      <input type="file" name="attachment" />
+      <input type="text" name="tools" placeholder="Preferred Tools / Brands (optional)" />
       <button type="submit">Submit Request</button>
     </form>
   </section>
@@ -236,5 +236,5 @@
     }
   </script>
 </body>
-  </html>
-        
+                                    </html>
+                                            
