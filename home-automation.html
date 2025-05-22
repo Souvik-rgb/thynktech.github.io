@@ -33,13 +33,16 @@
       background: var(--bg-color);
       color: var(--text-color);
     }
-    header {
+    header, footer {
       background: var(--header-bg);
       color: var(--header-text);
+      padding: 1rem;
+      text-align: center;
+    }
+    header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem;
       flex-wrap: wrap;
     }
     .branding {
@@ -182,7 +185,9 @@
   </div>
 </div>
 
-  </section>  <script>
+  </section>  <footer>
+    <p>&copy; 2025 Thynk Tech Automation. All rights reserved.</p>
+  </footer>  <script>
     document.addEventListener("DOMContentLoaded", () => {
       const savedTheme = localStorage.getItem("theme");
       if (savedTheme) {
@@ -196,5 +201,6 @@
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
     }
-  </script></body>
-  </html>
+  </script>
+</body>
+</html>
