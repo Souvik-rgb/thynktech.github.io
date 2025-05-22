@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en" data-theme="dark">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -76,8 +77,28 @@
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    h2 {
+    h2, h3 {
       color: var(--text-color);
+    }
+    .carousel {
+      overflow: hidden;
+      width: 100%;
+      margin: 1rem 0;
+    }
+    .carousel-track {
+      display: flex;
+      gap: 10px;
+      animation: scroll-left 20s linear infinite;
+    }
+    .carousel img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    @keyframes scroll-left {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
     }
   </style>
 </head>
@@ -91,17 +112,52 @@
     <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
   </header>  <section>
     <h2>Home Automation Solutions</h2>
-    <p>Welcome to our dedicated Home Automation page. Here you’ll find solutions designed to make everyday life smarter, safer, and more efficient. Our systems are tailored to your needs and integrated with the latest technologies.</p><h3>Smart Lighting System</h3>
+    <p>Welcome to our dedicated Home Automation page. Here you’ll find solutions designed to make everyday life smarter, safer, and more efficient. Our systems are tailored to your needs and integrated with the latest technologies.</p>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="images/home1.jpg" alt="Home automation 1">
+        <img src="images/home2.jpg" alt="Home automation 2">
+        <img src="images/home3.jpg" alt="Home automation 3">
+      </div>
+    </div><h3>Smart Lighting System</h3>
 <p>Automate your lights with motion sensors, voice commands, and mobile control. Save energy and enhance comfort throughout your home.</p>
+<div class="carousel">
+  <div class="carousel-track">
+    <img src="images/lighting1.jpg" alt="Lighting 1">
+    <img src="images/lighting2.jpg" alt="Lighting 2">
+    <img src="images/lighting3.jpg" alt="Lighting 3">
+  </div>
+</div>
 
 <h3>Voice-Controlled Thermostat</h3>
 <p>Control your home climate with smart thermostats integrated with Alexa or Google Assistant. Automatically adjust temperatures based on time of day or presence.</p>
+<div class="carousel">
+  <div class="carousel-track">
+    <img src="images/thermostat1.jpg" alt="Thermostat 1">
+    <img src="images/thermostat2.jpg" alt="Thermostat 2">
+    <img src="images/thermostat3.jpg" alt="Thermostat 3">
+  </div>
+</div>
 
 <h3>Security & Surveillance</h3>
 <p>Install smart locks, IP cameras, and intrusion detection systems that you can monitor from anywhere in the world using your smartphone.</p>
+<div class="carousel">
+  <div class="carousel-track">
+    <img src="images/security1.jpg" alt="Security 1">
+    <img src="images/security2.jpg" alt="Security 2">
+    <img src="images/security3.jpg" alt="Security 3">
+  </div>
+</div>
 
 <h3>Energy Monitoring</h3>
 <p>Track energy consumption of appliances, receive notifications, and automate shutdowns for efficient usage and reduced bills.</p>
+<div class="carousel">
+  <div class="carousel-track">
+    <img src="images/energy1.jpg" alt="Energy 1">
+    <img src="images/energy2.jpg" alt="Energy 2">
+    <img src="images/energy3.jpg" alt="Energy 3">
+  </div>
+</div>
 
   </section>  <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -118,4 +174,4 @@
       localStorage.setItem('theme', newTheme);
     }
   </script></body>
-  </html>
+    </html>
