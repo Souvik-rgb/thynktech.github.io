@@ -1,21 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Custom Robotics | Thynk Tech</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+      --header-bg: #001f3f;
+      --header-text: white;
+      --card-bg: white;
+      --button-bg: #001f3f;
+      --button-hover: #003366;
+    }
+    [data-theme="dark"] {
+      --bg-color: #111;
+      --text-color: #eee;
+      --header-bg: #000;
+      --header-text: #fff;
+      --card-bg: #1c1c1c;
+      --button-bg: #444;
+      --button-hover: #666;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+    header, footer {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem;
+      text-align: center;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .branding {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      max-width: 50px;
+    }
+    .brand-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    a {
+      color: var(--header-text);
+      text-decoration: none;
+      margin-left: auto;
+    }
+    a:hover {
+      color: #ffdc00;
+    }
+    .theme-toggle {
+      margin-left: 1rem;
+      background: none;
+      border: 1px solid var(--header-text);
+      color: var(--header-text);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2, h3 {
+      color: var(--text-color);
+    }
+    .carousel {
+      overflow: hidden;
+      width: 100%;
+      margin: 1rem 0;
+    }
+    .carousel-track {
+      display: flex;
+      gap: 10px;
+      animation: scroll-left 20s linear infinite;
+    }
+    .carousel video {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    @keyframes scroll-left {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Custom Robotics Projects</h1>
+    <div class="branding">
+      <img src="logo.png" alt="Thynk Tech Logo" class="logo">
+      <div class="brand-name">Thynk Tech Automation</div>
+    </div>
     <a href="index.html">Back to Home</a>
-  </header>
-  <section>
-    <h2>Liquid Dispensing Arm</h2>
-    <p>Stepper motor robot with touch control and adjustable output.</p>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </header>  <section>
+    <h2>Custom Robotics Solutions</h2>
+    <p>From precision-controlled robotic arms to mobile platforms and CNC machines, we develop bespoke robotic systems tailored to your unique applications in industrial, research, and service domains.</p>
+  </section>  <section>
+    <h3>Robotic Arms & Grippers</h3>
+    <p>Designed for precision and adaptability, our robotic arms handle everything from pick-and-place to surgical simulations.</p>
+    <div class="carousel">
+      <div class="carousel-track">
+        <video autoplay muted loop playsinline><source src="videos/arm1.mp4" type="video/mp4"></video>
+        <video autoplay muted loop playsinline><source src="videos/arm2.mp4" type="video/mp4"></video>
+        <video autoplay muted loop playsinline><source src="videos/arm3.mp4" type="video/mp4"></video>
+      </div>
+    </div><h3>CNC & Motion Systems</h3>
+<p>Integrate CNC routers and linear/rotary motion systems for manufacturing, prototyping, or automated processes.</p>
+<div class="carousel">
+  <div class="carousel-track">
+    <video autoplay muted loop playsinline><source src="videos/cnc1.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline><source src="videos/cnc2.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline><source src="videos/cnc3.mp4" type="video/mp4"></video>
+  </div>
+</div>
 
-    <h2>CNC Plotter Bot</h2>
-    <p>Custom-built CNC bot using Arduino and G-code for drawing or cutting.</p>
-  </section>
-</body>
-</html>
+<h3>Mobile & Autonomous Robots</h3>
+<p>Build AMRs for logistics, research, or service robotics, featuring obstacle avoidance, mapping, and control interfaces.</p>
+<div class="carousel">
+  <div class="carousel-track">
+    <video autoplay muted loop playsinline><source src="videos/mobile1.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline><source src="videos/mobile2.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline><source src="videos/mobile3.mp4" type="video/mp4"></video>
+  </div>
+</div>
+
+  </section>  <footer>
+    <p>&copy; 2025 Thynk Tech Automation. All rights reserved.</p>
+  </footer>  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    });
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const newTheme = current === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+  </script></body>
+  </html>
