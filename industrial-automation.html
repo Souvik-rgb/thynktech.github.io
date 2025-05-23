@@ -83,24 +83,18 @@
       color: var(--text-color);
     }
     .carousel {
-      overflow: hidden;
-      width: 100%;
-      margin: 1rem 0;
-    }
-    .carousel-track {
+      overflow-x: auto;
       display: flex;
       gap: 10px;
-      animation: scroll-left 10s linear infinite;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 1rem;
     }
     .carousel img {
       width: 300px;
       height: auto;
       border-radius: 10px;
       flex-shrink: 0;
-    }
-    @keyframes scroll-left {
-      from { transform: translateX(0); }
-      to { transform: translateX(-100%); }
+      scroll-snap-align: start;
     }
   </style>
 </head>
@@ -119,29 +113,23 @@
     <h3>PLC-Based Control Panels</h3>
     <p>Reliable programmable control systems for precision operations in factories, assembly lines, and more.</p>
     <div class="carousel">
-      <div class="carousel-track">
-        <img src="images/plc1.jpg" alt="PLC Image 1">
-        <img src="images/plc2.jpg" alt="PLC Image 2">
-        <img src="images/plc3.jpg" alt="PLC Image 3">
-      </div>
+      <img src="images/plc1.jpg" alt="PLC Image 1">
+      <img src="images/plc2.jpg" alt="PLC Image 2">
+      <img src="images/plc3.jpg" alt="PLC Image 3">
     </div><h3>SCADA and Monitoring Systems</h3>
 <p>Remotely monitor and control your plant with intuitive SCADA dashboards and real-time data tracking.</p>
 <div class="carousel">
-  <div class="carousel-track">
-    <img src="images/scada1.jpg" alt="SCADA Image 1">
-    <img src="images/scada2.jpg" alt="SCADA Image 2">
-    <img src="images/scada3.jpg" alt="SCADA Image 3">
-  </div>
+  <img src="images/scada1.jpg" alt="SCADA Image 1">
+  <img src="images/scada2.jpg" alt="SCADA Image 2">
+  <img src="images/scada3.jpg" alt="SCADA Image 3">
 </div>
 
 <h3>Industrial Robots</h3>
 <p>Deploy pick-and-place robots, arms, and mobile bots for repetitive or precision industrial tasks.</p>
 <div class="carousel">
-  <div class="carousel-track">
-    <img src="images/robot1.jpg" alt="Robot Image 1">
-    <img src="images/robot2.jpg" alt="Robot Image 2">
-    <img src="images/robot3.jpg" alt="Robot Image 3">
-  </div>
+  <img src="images/robot1.jpg" alt="Robot Image 1">
+  <img src="images/robot2.jpg" alt="Robot Image 2">
+  <img src="images/robot3.jpg" alt="Robot Image 3">
 </div>
 
   </section>  <footer>
