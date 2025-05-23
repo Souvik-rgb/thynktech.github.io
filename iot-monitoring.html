@@ -1,21 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IoT & Monitoring | Thynk Tech</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+      --header-bg: #001f3f;
+      --header-text: white;
+      --card-bg: white;
+      --button-bg: #001f3f;
+      --button-hover: #003366;
+    }
+    [data-theme="dark"] {
+      --bg-color: #111;
+      --text-color: #eee;
+      --header-bg: #000;
+      --header-text: #fff;
+      --card-bg: #1c1c1c;
+      --button-bg: #444;
+      --button-hover: #666;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+    header, footer {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem;
+      text-align: center;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .branding {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      max-width: 50px;
+    }
+    .brand-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    a {
+      color: var(--header-text);
+      text-decoration: none;
+      margin-left: auto;
+    }
+    a:hover {
+      color: #ffdc00;
+    }
+    .theme-toggle {
+      margin-left: 1rem;
+      background: none;
+      border: 1px solid var(--header-text);
+      color: var(--header-text);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2, h3 {
+      color: var(--text-color);
+    }
+    .carousel {
+      overflow: hidden;
+      width: 100%;
+      margin: 1rem 0;
+    }
+    .carousel-track {
+      display: flex;
+      gap: 10px;
+      animation: scroll-left 20s linear infinite;
+    }
+    .carousel video {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    @keyframes scroll-left {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>IoT & Monitoring Projects</h1>
+    <div class="branding">
+      <img src="logo.png" alt="Thynk Tech Logo" class="logo">
+      <div class="brand-name">Thynk Tech Automation</div>
+    </div>
     <a href="index.html">Back to Home</a>
-  </header>
-  <section>
-    <h2>Warehouse Environment Monitor</h2>
-    <p>ESP32-based sensor system logging temperature/humidity to the cloud.</p>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </header>  <section>
+    <h2>IoT & Monitoring Solutions</h2>
+    <p>We create IoT-based systems that monitor, analyze, and report live data from sensors, equipment, and environments. Whether it’s environmental monitoring or remote industrial tracking, our cloud-connected platforms keep you informed and in control.</p>
+  </section>  <section>
+    <h3>Environment Sensors & Alerts</h3>
+    <p>Measure temperature, humidity, air quality, and more with real-time dashboards and threshold-based alerts.</p>
+    <div class="carousel">
+      <div class="carousel-track">
+        <video autoplay muted loop playsinline><source src="videos/env1.mp4" type="video/mp4"></video>
+        <video autoplay muted loop playsinline><source src="videos/env2.mp4" type="video/mp4"></video>
+        <video autoplay muted loop playsinline><source src="videos/env3.mp4" type="video/mp4"></video>
+      </div>
+    </div><h3>Asset & Machine Tracking</h3>
+<p>Track assets and monitor industrial machines in real-time to predict failures and minimize downtime.</p>
+<div class="carousel">
+  <div class="carousel-track">
+    <video autoplay muted loop playsinline><source src="videos/tracker1.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline><source src="videos/tracker2.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline><source src="videos/tracker3.mp4" type="video/mp4"></video>
+  </div>
+</div>
 
-    <h2>Predictive Maintenance Alerts</h2>
-    <p>Vibration and heat tracking for early equipment failure warnings.</p>
-  </section>
-</body>
-</html>
+<h3>Cloud Dashboard & Analytics</h3>
+<p>Access sensor and device data from anywhere. Visualize patterns and generate actionable insights with interactive dashboards.</p>
+<div class="carousel">
+  <div class="carousel-track">
+    <video autoplay muted loop playsinline><source src="videos/cloud1.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline><source src="videos/cloud2.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline><source src="videos/cloud3.mp4" type="video/mp4"></video>
+  </div>
+</div>
+
+  </section>  <footer>
+    <p>&copy; 2025 Thynk Tech Automation. All rights reserved.</p>
+  </footer>  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    });
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const newTheme = current === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+  </script></body>
+  </html>
