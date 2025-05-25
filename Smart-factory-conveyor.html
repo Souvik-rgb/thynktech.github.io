@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Factory Conveyor | Thynk Tech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+      --header-bg: #001f3f;
+      --header-text: white;
+    }
+    [data-theme="dark"] {
+      --bg-color: #111;
+      --text-color: #eee;
+      --header-bg: #000;
+      --header-text: #fff;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+    header, footer {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem;
+      text-align: center;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .branding {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      max-width: 50px;
+    }
+    .brand-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    a {
+      color: var(--header-text);
+      text-decoration: none;
+    }
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--header-text);
+      color: var(--header-text);
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    video, img {
+      width: 100%;
+      max-width: 800px;
+      margin: 1rem 0;
+      border-radius: 8px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="branding">
+      <img src="logo.png" alt="Logo" class="logo">
+      <div class="brand-name">Thynk Tech Automation</div>
+    </div>
+    <a href="index.html">Back to Home</a>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </header>  <section>
+    <h1>Smart Factory Conveyor</h1>
+    <p>This project features a PLC-controlled conveyor system used in industrial automation environments. It includes sensor-triggered stop mechanisms and real-time web monitoring for operational visibility and control. Ideal for smart manufacturing lines.</p><video autoplay muted loop controls>
+  <source src="videos/conveyor-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+  </section>  <footer>
+    <p>&copy; 2025 Thynk Tech Automation. All rights reserved.</p>
+  </footer>  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    });
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const newTheme = current === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+  </script></body>
+</html>
