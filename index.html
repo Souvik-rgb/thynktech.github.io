@@ -1,150 +1,65 @@
-<!DOCTYPE html><html lang="en" data-theme="dark">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Automation | Thynk Tech</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #f9f9f9;
-      --text-color: #333;
-      --header-bg: #001f3f;
-      --header-text: white;
-      --card-bg: white;
-      --button-bg: #001f3f;
-      --button-hover: #003366;
-    }
-    [data-theme="dark"] {
-      --bg-color: #111;
-      --text-color: #eee;
-      --header-bg: #000;
-      --header-text: #fff;
-      --card-bg: #1c1c1c;
-      --button-bg: #444;
-      --button-hover: #666;
-    }
-    body {
-      font-family: 'Outfit', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: var(--bg-color);
-      color: var(--text-color);
-    }
-    header, footer {
-      background: var(--header-bg);
-      color: var(--header-text);
-      padding: 1rem;
-      text-align: center;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .branding {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .logo {
-      max-width: 50px;
-    }
-    .brand-name {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-    a {
-      color: var(--header-text);
-      text-decoration: none;
-      margin-left: auto;
-    }
-    a:hover {
-      color: #ffdc00;
-    }
-    .theme-toggle {
-      margin-left: 1rem;
-      background: none;
-      border: 1px solid var(--header-text);
-      color: var(--header-text);
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    h2, h3 {
-      color: var(--text-color);
-    }
-    .card {
-      background: var(--card-bg);
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thynk Tech - Automation Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
   <header>
-    <div class="branding">
-      <img src="logo.png" alt="Thynk Tech Logo" class="logo">
-      <div class="brand-name">Thynk Tech Automation</div>
+    <div class="container">
+      <h1 class="logo">Thynk Tech</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <a href="index.html">Back to Home</a>
-    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-  </header>  <section>
-    <h2>Project Portfolio</h2>
-    <div class="portfolio">
-      <a href="smart-factory-conveyor.html" class="card">
-        <h3>Smart Factory Conveyor</h3>
-        <p>PLC-driven conveyor with sensor-triggered stops and web monitoring.</p>
-      </a>
-      <a href="home-lighting-system.html" class="card">
-        <h3>Home Lighting System</h3>
-        <p>Motion-controlled lighting using ESP32 with mobile app control.</p>
-      </a>
-      <a href="iot-warehouse-monitor.html" class="card">
-        <h3>IoT Warehouse Monitor</h3>
-        <p>Temperature/humidity logging system with SMS/email alerts.</p>
-      </a>
-      <a href="liquid-dispensing-robot.html" class="card">
-        <h3>Liquid Dispensing Robot</h3>
-        <p>Stepper-controlled dispenser with touch interface and adjustable flow.</p>
-      </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Innovating Automation</h2>
+        <p>Your trusted partner in Home, Industrial, and IoT Automation</p>
+      </div>
+    </section>
+
+    <section class="services container">
+      <h2 class="section-title">Our Services</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Home Automation</h3>
+          <p>Smart home systems that bring convenience, security, and efficiency.</p>
+          <a href="home-automation.html" class="btn">Explore</a>
+        </div>
+        <div class="card">
+          <h3>Industrial Automation</h3>
+          <p>Custom automation for factories, labs, and industries.</p>
+          <a href="industrial-automation.html" class="btn">Explore</a>
+        </div>
+        <div class="card">
+          <h3>IoT Solutions</h3>
+          <p>Connect and control devices intelligently with our IoT setups.</p>
+          <a href="iot.html" class="btn">Explore</a>
+        </div>
+        <div class="card">
+          <h3>Custom Projects</h3>
+          <p>Have an idea? We help bring it to life with custom automation builds.</p>
+          <a href="custom-projects.html" class="btn">Explore</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Thynk Tech. All rights reserved.</p>
     </div>
-  </section>  <footer>
-    <p>&copy; 2025 Thynk Tech Automation. All rights reserved.</p>
-  </footer>  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) {
-        document.documentElement.setAttribute("data-theme", savedTheme);
-      }
-    });
-    function toggleTheme() {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-theme');
-      const newTheme = current === 'light' ? 'dark' : 'light';
-      html.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    }
-  </script></body>
+  </footer>
+</body>
 </html>
