@@ -5,56 +5,92 @@
   <title>Thynk Tech - Smart Automation Services</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <!-- Header with Logo -->
-  <header class="bg-white shadow p-4 flex items-center justify-between">
-    <div class="flex items-center">
-      <img src="assets/images/logo.png" alt="Thynk Tech Logo" class="w-10 h-10 mr-2">
-      <span class="text-xl font-semibold text-gray-700">Thynk Tech Home Automation</span>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="assets/images/logo.png" alt="Thynk Tech Logo" class="h-10 w-auto mr-2">
+        <span class="text-2xl font-bold text-blue-700">Thynk Tech</span>
+      </div>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#services" class="text-gray-600 hover:text-blue-600">Services</a>
+        <a href="#how-it-works" class="text-gray-600 hover:text-blue-600">How it Works</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+      </nav>
     </div>
-  </header>  <!-- Hero Section -->  <section class="bg-cover bg-center h-screen" style="background-image: url('https://source.unsplash.com/featured/?smart-home');">
-    <div class="bg-black bg-opacity-60 h-full flex flex-col justify-center items-center text-white text-center px-4">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">We Build Smart Spaces. You Live Smart.</h1>
-      <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded text-lg">Get a Free Consultation</a>
+  </header>  <!-- Hero Section -->  <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-white text-center" style="background-image: url('https://source.unsplash.com/featured/?smart-home,technology');">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="z-10 px-4">
+      <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">Empowering Smarter Living</h1>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Customized home and industrial automation solutions using cutting-edge technologies—built to match your needs.</p>
+      <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition">Get a Free Consultation</a>
     </div>
-  </section>  <!-- Our Approach -->  <section class="py-12 px-4 max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-6">Our Approach</h2>
-    <p class="text-center max-w-3xl mx-auto">We turn your lifestyle needs into smart, efficient automated systems using the best available tools and platforms. No sales, just service.</p>
-  </section>  <!-- Services -->  <section class="py-12 px-4 bg-white">
-    <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="p-6 bg-gray-100 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">Home Automation</h3>
-        <p>Control your lights, fans, appliances, and more using apps and voice commands.</p>
-      </div>
-      <div class="p-6 bg-gray-100 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">Voice & App Integration</h3>
-        <p>Connect your automation system with Alexa, Google Assistant, or mobile apps.</p>
-      </div>
-      <div class="p-6 bg-gray-100 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">Security & Surveillance</h3>
-        <p>Smart locks, door sensors, cameras and remote monitoring features.</p>
-      </div>
-      <div class="p-6 bg-gray-100 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">Energy Monitoring</h3>
-        <p>Track energy consumption and automate based on energy-saving logic.</p>
-      </div>
-      <div class="p-6 bg-gray-100 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">Custom Projects</h3>
-        <p>We build unique automation solutions tailored to your specific needs.</p>
+  </section>  <!-- How It Works Section -->  <section id="how-it-works" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">How It Works</h2>
+      <p class="text-gray-600 mb-12">We understand your goals, select the right components, and build your automation project—end-to-end.</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-blue-600 text-4xl mb-4">1</div>
+          <h3 class="text-xl font-semibold mb-2">Consult & Plan</h3>
+          <p class="text-gray-600">Tell us what you need. We’ll draft the ideal automation design for your space.</p>
+        </div>
+        <div>
+          <div class="text-blue-600 text-4xl mb-4">2</div>
+          <h3 class="text-xl font-semibold mb-2">Choose the Right Tech</h3>
+          <p class="text-gray-600">We select and integrate the best components—ESP32, sensors, controllers, and apps.</p>
+        </div>
+        <div>
+          <div class="text-blue-600 text-4xl mb-4">3</div>
+          <h3 class="text-xl font-semibold mb-2">Build & Automate</h3>
+          <p class="text-gray-600">We implement the solution at your site, test it, and hand over complete control.</p>
+        </div>
       </div>
     </div>
-  </section>  <!-- Contact Section -->  <section id="contact" class="py-12 px-4 max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
-    <p class="mb-6">Want to automate your home or office? Let's talk!</p>
-    <form class="space-y-4">
-      <input type="text" placeholder="Your Name" class="w-full p-3 border rounded">
-      <input type="email" placeholder="Your Email" class="w-full p-3 border rounded">
-      <textarea placeholder="Your Message" class="w-full p-3 border rounded h-32"></textarea>
-      <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Send Message</button>
-    </form>
+  </section>  <!-- Services Section -->  <section id="services" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Smart Home Setup</h3>
+          <p class="text-gray-600">Lighting, fans, and appliances controlled via mobile or voice.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">App & Voice Integration</h3>
+          <p class="text-gray-600">Alexa, Google Assistant, and custom Android apps to control your environment.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Surveillance & Security</h3>
+          <p class="text-gray-600">Smart door locks, sensors, and remote surveillance.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Energy Monitoring</h3>
+          <p class="text-gray-600">Monitor and optimize energy use in real-time with tailored solutions.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Custom Automations</h3>
+          <p class="text-gray-600">Build from scratch or modify your existing automation setup—your needs, your way.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Industrial Automation</h3>
+          <p class="text-gray-600">Process control, sensor networks, and smart machinery interfaces.</p>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Contact Section -->  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Let's Automate Together</h2>
+      <p class="text-gray-600 mb-8">Fill out the form and we’ll get back to you with tailored automation ideas.</p>
+      <form class="space-y-6">
+        <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded">
+        <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded">
+        <textarea placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded h-32"></textarea>
+        <button type="submit" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded hover:bg-blue-700">Send Message</button>
+      </form>
+    </div>
   </section>  <!-- Footer -->  <footer class="bg-gray-800 text-white py-6 text-center">
-    <p>&copy; 2025 Thynk Tech. All rights reserved.</p>
+    <p>&copy; 2025 Thynk Tech. Crafted with purpose. All rights reserved.</p>
   </footer>
 </body>
 </html>
