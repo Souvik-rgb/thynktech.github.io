@@ -19,14 +19,25 @@
         <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
       </nav>
     </div>
-  </header>  <!-- Hero Section -->  <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-white text-center" style="background-image: url('https://source.unsplash.com/featured/?smart-home,technology');">
-    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-    <div class="z-10 px-4">
-      <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">Empowering Smarter Living</h1>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">Customized home and industrial automation solutions using cutting-edge technologies—built to match your needs.</p>
-      <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition">Get a Free Consultation</a>
-    </div>
-  </section>  <!-- How It Works Section -->  <section id="how-it-works" class="py-20 bg-white">
+  </header> 
+  <!-- Hero Section with Video -->
+<section class="relative h-screen overflow-hidden flex items-center justify-center text-white text-center">
+  <video id="heroVideo" class="absolute top-0 left-0 w-full h-full object-cover" autoplay loop muted playsinline>
+    <source src="videos/bg-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div class="relative z-10 px-4">
+    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">Empowering Smarter Living</h1>
+    <p class="text-xl mb-8 max-w-2xl mx-auto">Customized home and industrial automation solutions using cutting-edge technologies—built to match your needs.</p>
+    <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition">Get a Free Consultation</a>
+    <button onclick="toggleMute()" class="ml-4 mt-4 bg-white text-gray-800 font-semibold px-4 py-2 rounded shadow hover:bg-gray-200 transition">
+      🔇 / 🔊
+    </button>
+  </div>
+</section>
+  <!-- How It Works Section --> 
+  <section id="how-it-works" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-4">How It Works</h2>
       <p class="text-gray-600 mb-12">We understand your goals, select the right components, and build your automation project—end-to-end.</p>
