@@ -1,105 +1,122 @@
 <!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thynk Tech - Smart Automation Solutions</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-  <!-- Header -->
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center">
-        <img src="images/logo.png" alt="Thynk Tech Logo" class="h-10 w-auto mr-2">
-        <span class="text-2xl font-bold text-blue-700">Thynk Tech</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thynk Tech – Smarter Automation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div class="flex items-center">
+          <img src="assets/images/logo.png" alt="Thynk Tech Logo" class="h-10 w-auto mr-2" />
+          <span class="text-2xl font-bold text-blue-700">Thynk Tech</span>
+        </div>
+        <nav class="space-x-6 hidden md:block">
+          <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
+          <a href="#features" class="text-gray-700 hover:text-blue-600">Features</a>
+          <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
+          <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+        </nav>
       </div>
-      <nav class="space-x-6 hidden md:block">
-        <a href="#services" class="text-gray-600 hover:text-blue-600">Services</a>
-        <a href="#how-it-works" class="text-gray-600 hover:text-blue-600">How it Works</a>
-        <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
-      </nav>
-    </div>
-  </header>  <!-- Hero Section with Video -->  <section class="relative h-screen overflow-hidden flex items-center justify-center text-white text-center">
-    <video id="heroVideo" class="absolute top-0 left-0 w-full h-full object-cover" autoplay loop muted playsinline>
-      <source src="videos/automation-demo.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-    <div class="relative z-10 px-4">
-      <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">Empowering Smarter Living</h1>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">Customized home and industrial automation solutions using cutting-edge technologies—built to match your needs.</p>
-      <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition">Get a Free Consultation</a>
-      <button onclick="toggleMute()" class="ml-4 mt-4 bg-white text-gray-800 font-semibold px-4 py-2 rounded shadow hover:bg-gray-200 transition">🔇 / 🔊</button>
-    </div>
-  </section>  <!-- How It Works Section -->  <section id="how-it-works" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">How It Works</h2>
-      <p class="text-gray-600 mb-12">We understand your goals, select the right components, and build your automation project—end-to-end.</p>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div>
-          <div class="text-blue-600 text-4xl mb-4">1</div>
-          <h3 class="text-xl font-semibold mb-2">Consult & Plan</h3>
-          <p class="text-gray-600">Tell us what you need. We’ll draft the ideal automation design for your space.</p>
-        </div>
-        <div>
-          <div class="text-blue-600 text-4xl mb-4">2</div>
-          <h3 class="text-xl font-semibold mb-2">Choose the Right Tech</h3>
-          <p class="text-gray-600">We select and integrate the best components—ESP32, sensors, controllers, and apps.</p>
-        </div>
-        <div>
-          <div class="text-blue-600 text-4xl mb-4">3</div>
-          <h3 class="text-xl font-semibold mb-2">Build & Automate</h3>
-          <p class="text-gray-600">We implement the solution at your site, test it, and hand over complete control.</p>
-        </div>
+    </header><!-- Hero Section -->
+<section class="bg-blue-600 text-white py-28 text-center">
+  <div class="max-w-3xl mx-auto px-4">
+    <h1 class="text-5xl font-bold mb-6">Smarter Living with Thynk Tech</h1>
+    <p class="text-xl mb-8">
+      Seamless automation tailored to your lifestyle. Control everything with ease.
+    </p>
+    <a
+      href="#contact"
+      class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition"
+      >Get Started</a
+    >
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-20 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-10">Why Choose Thynk Tech?</h2>
+    <div class="grid md:grid-cols-3 gap-8 text-left">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-2">Total Control</h3>
+        <p>From lighting to security, manage everything from one dashboard.</p>
       </div>
-    </div>
-  </section>  <!-- Services Section -->  <section id="services" class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-10">Our Services</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <a href="services/smart-home.html" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition block">
-          <h3 class="text-xl font-semibold mb-2">Smart Home Setup</h3>
-          <p class="text-gray-600">Lighting, fans, and appliances controlled via mobile or voice.</p>
-        </a>
-        <a href="services/voice-integration.html" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition block">
-          <h3 class="text-xl font-semibold mb-2">App & Voice Integration</h3>
-          <p class="text-gray-600">Alexa, Google Assistant, and custom Android apps to control your environment.</p>
-        </a>
-        <a href="services/security.html" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition block">
-          <h3 class="text-xl font-semibold mb-2">Surveillance & Security</h3>
-          <p class="text-gray-600">Smart door locks, sensors, and remote surveillance.</p>
-        </a>
-        <a href="services/energy-monitoring.html" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition block">
-          <h3 class="text-xl font-semibold mb-2">Energy Monitoring</h3>
-          <p class="text-gray-600">Monitor and optimize energy use in real-time with tailored solutions.</p>
-        </a>
-        <a href="services/custom-automation.html" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition block">
-          <h3 class="text-xl font-semibold mb-2">Custom Automations</h3>
-          <p class="text-gray-600">Build from scratch or modify your existing automation setup—your needs, your way.</p>
-        </a>
-        <a href="services/industrial.html" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition block">
-          <h3 class="text-xl font-semibold mb-2">Industrial Automation</h3>
-          <p class="text-gray-600">Process control, sensor networks, and smart machinery interfaces.</p>
-        </a>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-2">Custom Setup</h3>
+        <p>We build automation systems based on your exact needs—no pre-made kits.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-2">Secure & Scalable</h3>
+        <p>Designed to grow with you and built to keep your data private and secure.</p>
       </div>
     </div>
-  </section>  <!-- Contact Section -->  <section id="contact" class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Let's Automate Together</h2>
-      <p class="text-gray-600 mb-8">Fill out the form and we’ll get back to you with tailored automation ideas.</p>
-      <form class="space-y-6">
-        <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded">
-        <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded">
-        <textarea placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded h-32"></textarea>
-        <button type="submit" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded hover:bg-blue-700">Send Message</button>
-      </form>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">About Thynk Tech</h2>
+    <p class="text-lg text-gray-600">
+      We are a passionate team of engineers and designers building personalized automation solutions
+      for homes, offices, and industries using technologies like ESP32, Python, and open-source systems.
+    </p>
+  </div>
+</section>
+
+<!-- Services Overview -->
+<section id="services" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-10">Our Services</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <a href="services/smart-home.html" class="block bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Smart Home Setup</h3>
+        <p>Automate lights, appliances, and more for a connected lifestyle.</p>
+      </a>
+      <a href="services/security.html" class="block bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Smart Security Systems</h3>
+        <p>Control doors, sensors, and cameras remotely with alerts.</p>
+      </a>
+      <a href="services/voice-integration.html" class="block bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Voice & App Integration</h3>
+        <p>Seamlessly use Google Assistant, Alexa, or our custom app.</p>
+      </a>
     </div>
-  </section>  <!-- Footer -->  <footer class="bg-gray-800 text-white py-6 text-center">
-    <p>&copy; 2025 Thynk Tech. Crafted with purpose. All rights reserved.</p>
-  </footer>  <script>
-    function toggleMute() {
-      const video = document.getElementById("heroVideo");
-      video.muted = !video.muted;
-    }
-  </script></body>
-          </html>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+    <p class="text-gray-600 mb-8">Tell us about your project and we’ll get back to you.</p>
+    <form class="space-y-6">
+      <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded" />
+      <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded" />
+      <textarea
+        placeholder="Your Message"
+        class="w-full p-3 border border-gray-300 rounded h-32"
+      ></textarea>
+      <button
+        type="submit"
+        class="bg-blue-600 text-white font-semibold px-6 py-3 rounded hover:bg-blue-700"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-6 text-center">
+  <p>&copy; 2025 Thynk Tech. Built with care and automation in mind.</p>
+</footer>
+
+  </body>
+  </html>
