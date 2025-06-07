@@ -1,122 +1,143 @@
-<!DOCTYPE html><html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thynk Tech – Smarter Automation</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="bg-white text-gray-800 font-sans">
-    <!-- Header -->
-    <header class="bg-white shadow-sm">
-      <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <div class="flex items-center">
-          <img src="assets/images/logo.png" alt="Thynk Tech Logo" class="h-10 w-auto mr-2" />
-          <span class="text-2xl font-bold text-blue-700">Thynk Tech</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thynk Tech – Imagine. Automate. Elevate.</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .animate-fadeIn { animation: fadeIn 1.6s ease; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+</head>
+<body class="bg-gradient-to-tr from-blue-50 via-white to-indigo-50 text-gray-800 font-sans">
+
+  <!-- Decorative SVG Background -->
+  <svg class="absolute top-0 left-0 w-full h-72 pointer-events-none" aria-hidden="true">
+    <defs>
+      <linearGradient id="bg-grad" x1="0" x2="1" y1="0" y2="1">
+        <stop stop-color="#3b82f6" stop-opacity="0.15"/>
+        <stop offset="1" stop-color="#6366f1" stop-opacity="0.10"/>
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#bg-grad)" />
+  </svg>
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm animate-fadeIn">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="assets/images/logo.png" alt="Thynk Tech Logo" class="h-10 w-auto mr-3" />
+        <span class="text-3xl font-extrabold text-indigo-700 tracking-wide">Thynk Tech</span>
+      </div>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">Our Story</a>
+        <a href="#features" class="text-gray-700 hover:text-indigo-600 transition">Why Us?</a>
+        <a href="#services" class="text-gray-700 hover:text-indigo-600 transition">Solutions</a>
+        <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition">Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-indigo-600 to-blue-500 text-white py-32 text-center shadow-lg animate-fadeIn">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-5xl font-extrabold mb-6 drop-shadow">Imagine. Automate. <span class="text-yellow-300">Elevate.</span></h1>
+      <p class="text-xl mb-8 opacity-90">
+        Smart automation that adapts to <span class="font-semibold">your</span> world. <br>
+        Make every day effortless, beautiful, and secure.
+      </p>
+      <a href="#contact" class="bg-yellow-300 text-indigo-700 font-semibold px-8 py-3 rounded-full shadow hover:bg-yellow-400 hover:text-indigo-800 transition transform hover:scale-105">
+        Start Your Journey
+      </a>
+    </div>
+    <!-- Decorative circles -->
+    <div class="absolute top-8 right-8 w-24 h-24 rounded-full bg-white opacity-10"></div>
+    <div class="absolute bottom-8 left-8 w-16 h-16 rounded-full bg-white opacity-10"></div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-gray-100 animate-fadeIn">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10 text-indigo-700">Why Thynk Tech?</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+        <div class="bg-white p-8 rounded-xl shadow hover:shadow-xl transition">
+          <h3 class="text-xl font-bold mb-2 text-blue-600">Intuitive Mastery</h3>
+          <p>All your smart devices, accessible at a touch. Effortless control, powerful possibilities.</p>
         </div>
-        <nav class="space-x-6 hidden md:block">
-          <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
-          <a href="#features" class="text-gray-700 hover:text-blue-600">Features</a>
-          <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
-          <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
-        </nav>
-      </div>
-    </header><!-- Hero Section -->
-<section class="bg-blue-600 text-white py-28 text-center">
-  <div class="max-w-3xl mx-auto px-4">
-    <h1 class="text-5xl font-bold mb-6">Smarter Living with Thynk Tech</h1>
-    <p class="text-xl mb-8">
-      Seamless automation tailored to your lifestyle. Control everything with ease.
-    </p>
-    <a
-      href="#contact"
-      class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition"
-      >Get Started</a
-    >
-  </div>
-</section>
-
-<!-- Features Section -->
-<section id="features" class="py-20 bg-gray-100">
-  <div class="max-w-7xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-10">Why Choose Thynk Tech?</h2>
-    <div class="grid md:grid-cols-3 gap-8 text-left">
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="text-xl font-semibold mb-2">Total Control</h3>
-        <p>From lighting to security, manage everything from one dashboard.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="text-xl font-semibold mb-2">Custom Setup</h3>
-        <p>We build automation systems based on your exact needs—no pre-made kits.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="text-xl font-semibold mb-2">Secure & Scalable</h3>
-        <p>Designed to grow with you and built to keep your data private and secure.</p>
+        <div class="bg-white p-8 rounded-xl shadow hover:shadow-xl transition">
+          <h3 class="text-xl font-bold mb-2 text-blue-600">Tailored for You</h3>
+          <p>Your life isn’t “one-size-fits-all”. Neither is our automation. We design around <em>you</em>.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow hover:shadow-xl transition">
+          <h3 class="text-xl font-bold mb-2 text-blue-600">Ironclad Security</h3>
+          <p>Data privacy and reliability, built in. Our systems grow with your needs—always secure, always yours.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- About Section -->
-<section id="about" class="py-20 bg-white">
-  <div class="max-w-5xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-4">About Thynk Tech</h2>
-    <p class="text-lg text-gray-600">
-      We are a passionate team of engineers and designers building personalized automation solutions
-      for homes, offices, and industries using technologies like ESP32, Python, and open-source systems.
-    </p>
-  </div>
-</section>
-
-<!-- Services Overview -->
-<section id="services" class="py-20 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-10">Our Services</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <a href="services/smart-home.html" class="block bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Smart Home Setup</h3>
-        <p>Automate lights, appliances, and more for a connected lifestyle.</p>
-      </a>
-      <a href="services/security.html" class="block bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Smart Security Systems</h3>
-        <p>Control doors, sensors, and cameras remotely with alerts.</p>
-      </a>
-      <a href="services/voice-integration.html" class="block bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Voice & App Integration</h3>
-        <p>Seamlessly use Google Assistant, Alexa, or our custom app.</p>
-      </a>
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white animate-fadeIn">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4 text-indigo-700">Our Story</h2>
+      <p class="text-lg text-gray-700 mb-4">
+        Thynk Tech was born from a belief: <span class="italic">technology should adapt to people, not the other way around.</span> 
+        Our journey began with a group of creators, engineers, and dreamers building personalized automation for homes, offices, and industries.
+      </p>
+      <p class="text-lg text-gray-600">
+        We use open standards, ESP32, Python, and open-source magic—so you get a solution that’s uniquely yours and always cutting-edge. 
+        Your comfort, convenience, and safety inspire every line of code we write.
+      </p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Contact Section -->
-<section id="contact" class="py-20 bg-white">
-  <div class="max-w-4xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-    <p class="text-gray-600 mb-8">Tell us about your project and we’ll get back to you.</p>
-    <form class="space-y-6">
-      <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded" />
-      <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded" />
-      <textarea
-        placeholder="Your Message"
-        class="w-full p-3 border border-gray-300 rounded h-32"
-      ></textarea>
-      <button
-        type="submit"
-        class="bg-blue-600 text-white font-semibold px-6 py-3 rounded hover:bg-blue-700"
-      >
-        Send Message
-      </button>
-    </form>
-  </div>
-</section>
+  <!-- Services Overview -->
+  <section id="services" class="py-20 bg-gradient-to-tr from-gray-100 to-indigo-50 animate-fadeIn">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10 text-indigo-700">What We Build</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <a href="services/smart-home.html" class="block bg-white p-8 rounded-xl shadow hover:shadow-2xl hover:bg-blue-50 transition">
+          <h3 class="text-xl font-semibold mb-2 text-blue-600">Living, Reimagined</h3>
+          <p>Smart Home Setups that bring lighting, climate, and energy to your fingertips. Welcome to seamless comfort.</p>
+        </a>
+        <a href="services/security.html" class="block bg-white p-8 rounded-xl shadow hover:shadow-2xl hover:bg-blue-50 transition">
+          <h3 class="text-xl font-semibold mb-2 text-blue-600">Invisible Guardians</h3>
+          <p>Smart Security that never sleeps. Control doors, sensors, and cameras from anywhere, anytime.</p>
+        </a>
+        <a href="services/voice-integration.html" class="block bg-white p-8 rounded-xl shadow hover:shadow-2xl hover:bg-blue-50 transition">
+          <h3 class="text-xl font-semibold mb-2 text-blue-600">Speak & Command</h3>
+          <p>Integrate with Google Assistant, Alexa, or our custom app. Voice or tap—your world, your way.</p>
+        </a>
+      </div>
+    </div>
+  </section>
 
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-6 text-center">
-  <p>&copy; 2025 Thynk Tech. Built with care and automation in mind.</p>
-</footer>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white animate-fadeIn">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6 text-indigo-700">Let’s Connect</h2>
+      <p class="text-gray-700 mb-8">Dreaming up a project? Share your vision—let’s build something extraordinary together.</p>
+      <form class="space-y-6">
+        <input type="text" placeholder="Your Name" class="w-full p-3 border border-indigo-200 rounded focus:border-indigo-400 focus:ring-1 focus:ring-indigo-200 transition" />
+        <input type="email" placeholder="Your Email" class="w-full p-3 border border-indigo-200 rounded focus:border-indigo-400 focus:ring-1 focus:ring-indigo-200 transition" />
+        <textarea placeholder="Your Message" class="w-full p-3 border border-indigo-200 rounded h-32 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-200 transition"></textarea>
+        <button type="submit" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded hover:bg-indigo-700 transition shadow">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
 
-  </body>
-  </html>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 text-center animate-fadeIn">
+    <div class="flex justify-center space-x-6 mb-2">
+      <a href="https://github.com/Souvik-rgb" class="hover:text-yellow-300" target="_blank" aria-label="GitHub">
+        <svg class="inline h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.3 7.8 10.8.6.1.8-.2.8-.6v-2c-3.2.7-3.8-1.6-3.8-1.6-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.8-1.3 1.8-1.7-2.6-.3-5.4-1.3-5.4-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2.9-.2 1.8-.3 2.7-.3.9 0 1.8.1 2.7.3 2.2-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.7.8 1.2 1.9 1.2 3.2 0 4.5-2.8 5.5-5.4 5.8 1.2 1 .7 1.6 1.8 1.7 1.6.1 3.3-.1 3.3-.1v2c0 .4.2.7.8.6C20.7 21.3 24 17.1 24 12c0-6.3-5.2-11.5-12-11.5z"/></svg>
+      </a>
+      <!-- Add more social links if needed -->
+    </div>
+    <p>&copy; 2025 Thynk Tech. Crafted with imagination and automation.</p>
+  </footer>
+</body>
+</html>
